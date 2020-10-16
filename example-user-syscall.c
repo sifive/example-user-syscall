@@ -18,7 +18,7 @@ struct metal_register_file my_regfile = {
 	.sp = (riscv_xlen_t) (my_stack + sizeof(my_stack)),
 };
 
-void metal_exception_ecall_from_u_mode_handler(struct metal_cpu *cpu, int ecode)
+void metal_exception_ecall_from_u_mode_handler(struct metal_cpu cpu, int ecode)
 {
 	if(ecode == ECODE_SYSCALL_FROM_U_MODE) {
 		printf("Handling syscall from User mode\n");
